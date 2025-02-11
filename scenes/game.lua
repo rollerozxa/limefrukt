@@ -129,7 +129,8 @@ function game.update(dt)
 	end
 
 	if not dbg.isEnabled('phys_pause') then
-		world:update(dt)
+		-- Cap physics to dt=0.02 to prevent physics collapse, equiv. to 50fps
+		world:update(math.min(dt, 0.02))
 	end
 
 	-- Ball throwing code. When holding down mouse...
