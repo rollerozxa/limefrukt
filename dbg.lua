@@ -26,7 +26,7 @@ _dbg.coords = {
 		love.graphics.setColor(1,1,1)
 		love.graphics.setLineWidth(1)
 
-		local coord = {"scaled = {",mx,",",my,"}\nunscaled = {",umx,",",umy,"}\nozxa units = {",math.floor(mx/40),",",math.floor(my/40),"}"}
+		local coord = {"scaled = {",mx,",",my,"}\nunscaled = {",umx,",",umy,"}\nozxa units = {",math.floor(umx/40),",",math.floor(umy/40),"}"}
 
 		love.graphics.print(table.concat(coord), 5, 460)
 	end
